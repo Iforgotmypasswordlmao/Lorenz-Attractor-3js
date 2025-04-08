@@ -43,7 +43,7 @@ function init()
 {
     scene.remove( line );
     lorenzSystem = new Lorenz(variables, position)
-    maxPoints = 10/systemControls['deltaTime']
+    maxPoints = 100/systemControls['deltaTime']
     const geometry = new THREE.BufferGeometry()
     const positionList = new Float32Array( maxPoints * 3)
     geometry.setAttribute( 'position', new THREE.BufferAttribute( positionList, 3 ) );
