@@ -62,10 +62,10 @@ function updateLorenzPosition()
     for (let j = 1; j < maxPoints + 1; j++)
     {  
         positions[ j*3 - 3 ] = isNaN(lorenzSystem.position['x']) ? 0 : lorenzSystem.position['x']*scale;
-		positions[ j*3 - 2 ] = isNaN(lorenzSystem.position['y']) ? 0 : lorenzSystem.position['y']*scale;
-		positions[ j*3 - 1 ] = isNaN(lorenzSystem.position['z']) ? 0 : lorenzSystem.position['z']*scale;
-        lorenzSystem.updateVelocity()
-        lorenzSystem.updatePosition(systemControls['deltaTime'])
+	positions[ j*3 - 2 ] = isNaN(lorenzSystem.position['y']) ? 0 : lorenzSystem.position['y']*scale;
+	positions[ j*3 - 1 ] = isNaN(lorenzSystem.position['z']) ? 0 : lorenzSystem.position['z']*scale;
+        lorenzSystem.updateVelocity();
+        lorenzSystem.updatePosition(systemControls['deltaTime']);
         
     }
     line.geometry.attributes.position.needsUpdate = true;
